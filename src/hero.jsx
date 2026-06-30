@@ -2,6 +2,12 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import logo from "./assets/logo.png";
 import checkmark from "./assets/whitecheck.png";
+import ScreenShot1 from "./assets/screenshot1.jpeg";
+import ScreenShot2 from "./assets/screenshot2.jpeg";
+import ScreenShot3 from "./assets/screenshot3.jpeg";
+import ScreenShot4 from "./assets/screenshot4.jpeg";
+import ScreenShot5 from "./assets/screenshot5.jpeg";
+import ScreenShot6 from "./assets/screenshot6.jpeg";
 
 function Hero() {
   const [consultOpen, setConsultOpen] = useState(false);
@@ -306,6 +312,74 @@ function Hero() {
             </p>
           </div>
         </div>
+      </div>
+      <div className="bg-[#000000] px-5 md:px-8 py-10">
+        <h1 className="text-3xl font-head md:text-5xl mb-7">Client Success</h1>
+        <div className="grid  md:grid-cols-3 items-center justify-center gap-5 ">
+          <div className="overflow-hidden h-89 w-full border-[#F1DABF] flex justify-center items-center rounded-md text-center">
+            <img
+              src={ScreenShot1}
+              className="w-full object-cover h-full object-center rounded-lg"
+            />
+          </div>
+          <div className="border overflow-hidden h-90 w-full border-[#F1DABF] flex justify-center items-center rounded-md text-center">
+            <img
+              src={ScreenShot2}
+              className="w-full object-cover h-full object-center rounded-lg"
+            />
+          </div>
+          <div className="border overflow-hidden h-90 w-full border-[#F1DABF] flex justify-center items-center rounded-md text-center">
+            <img
+              src={ScreenShot3}
+              className="w-full h-full object-cover object-center rounded-lg"
+            />
+          </div>
+          <div className="border overflow-hidden h-90 w-full border-[#F1DABF] flex justify-center items-center rounded-md text-center">
+            <img
+              src={ScreenShot4}
+              className="w-full h-full object-cover object-center rounded-lg"
+            />
+          </div>
+          <div className="border overflow-hidden h-90 w-full border-[#F1DABF] flex justify-center items-center rounded-md text-center">
+            <img
+              src={ScreenShot5}
+              className="w-full h-full object-cover object-center rounded-lg"
+            />
+          </div>
+          <div className="border overflow-hidden h-90 w-full border-[#F1DABF] flex justify-center items-center rounded-md text-center">
+            <img
+              src={ScreenShot6}
+              className="w-full h-full object-cover object-center rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="px-5 md:px-8 py-10">
+        <div className="border px-5 flex flex-col gap-4 items-center py-6 rounded-xl">
+          <h1 className="text-3xl font-head md:text-5xl mb-3">
+            Ready To Start?
+          </h1>
+          <p className="text-center font-body md:text-lg">
+            Get 3 months of credit disputes for $169 and start positioning your
+            credit for your next move.
+          </p>
+          <a
+            href="https://buy.stripe.com/dRm5kF2KsecA1pC6HRcfK09"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#F1DABF] active:scale-95 font-body mt-4 min-w-[60%] md:text-lg font-bold hover:text-[#362315] text-black py-2 px-4 rounded-full text-center inline-block"
+          >
+            Get started now
+          </a>
+        </div>
+      </div>
+
+      <div className="mt-6">
+        <hr className="w-full mb-5 text-[#362417] h-0.5" />
+        <p className="text-sm mb-3 text-center text-neutral-600 font-body ">
+          © 2026 Emmpire Solutions. All rights reserved.
+        </p>
       </div>
     </>
   );
