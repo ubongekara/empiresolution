@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import logo from "./assets/logo.png";
+import logo from "./assets/logo2.png";
 import checkmark from "./assets/whitecheck.png";
 import ScreenShot1 from "./assets/screenshot1.jpeg";
 import ScreenShot2 from "./assets/screenshot2.jpeg";
@@ -11,25 +11,27 @@ import ScreenShot6 from "./assets/screenshot6.jpeg";
 
 function Hero() {
   const [consultOpen, setConsultOpen] = useState(false);
+  const [openFaq, setOpenFaq] = useState(null); // null | 0 | 1
 
   return (
     <>
-      <div className="relative overflow-hidden bg-[linear-gradient(to_right,black_10%,#362417_35%,#362417_60%,black_100%)] px-5 md:px-8 min-h-screen py-13 text-center">
+      <div className="relative overflow-hidden bg-[linear-gradient(to_right,black_10%,#362417_35%,#362417_60%,black_100%)] px-5 md:px-8 min-h-screen text-center">
         {/* low-opacity background text */}
         <div
           aria-hidden="true"
           className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
           style={{ opacity: 0.06 }}
         >
-          <span className="font-head font-bold whitespace-nowrap text-white text-7xl md:text-[15vw] rotate-[-6deg]">
-            SUMMER SALE
+          <span className="font-head font-bold tracking-wide text-white text-7xl md:text-[12vw] -rotate-80 flex flex-col items-center">
+            <span className="block">SUMMER</span>
+            <span className="block">SALE</span>
           </span>
         </div>
 
         <img
           src={logo}
           alt="Company Logo"
-          className="relative size-35 mx-auto mb-4"
+          className="relative object-center bg-center size-60 md:size-90 mx-auto "
         />
 
         <div className="relative flex flex-col items-center justify-between gap-3">
@@ -44,6 +46,25 @@ function Hero() {
             We work to remove negative items from your credit by leveraging your
             consumer rights.
           </p>
+
+          <div className="bg-[black] border-[#F1DABF]  w-fit border px-8 py-8 rounded-2xl mt-4">
+            <h1 className="text-5xl uppercase md:text-6xl font-bold mb-7 text-[#F1DABF]">
+              only $79 a month
+            </h1>
+
+            <div className="bg-[#F1DABF] active:scale-95 transition-all duration-300 cursor-pointer mt-4 rounded-lg font-bold font-body uppercase text-black px-3 py-6">
+              <a
+                href="https://buy.stripe.com/7sYeVfdp67Occ4g4zJcfK0b"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Claim my summer special now
+              </a>
+            </div>
+            <p className="uppercase mt-4 text-lg font-bold">
+              secure your spot today! Under it
+            </p>
+          </div>
 
           {/* Free consultation dropdown */}
           <div className="w-full max-w-xl mt-6 text-left">
@@ -81,28 +102,19 @@ function Hero() {
                 </p>
 
                 <div className="px-4 py-3 rounded-lg mb-4 text-sm font-bold bg-[#3a1411] text-red-400 border border-red-500 font-body">
-                  Must have my free core 7 days free trial account
+                  MYFREESCORE free trial account
                 </div>
 
                 <button className="w-full py-3 rounded-lg font-bold font-body text-sm uppercase bg-[#F1DABF] text-black hover:-translate-y-1 duration-300">
-                  Book my free consultation
+                  <a href="https://calendly.com/d/ds6k-p82-wcp" target="_blank">
+                    Book my free consultation
+                  </a>
                 </button>
               </div>
             )}
           </div>
-
-          {/* Big CTA + small price */}
-          <div className="mt-10 flex flex-col items-end gap-2 self-end">
-            <button className="uppercase active:border active:border-white hover:-translate-y-1 duration-300 transition-all rounded-full font-body font-bold px-10 py-5 bg-[#F1DABF] text-black text-lg">
-              Start Now
-            </button>
-            <span className="text-xs text-neutral-400 font-body">
-              only $79 a month
-            </span>
-          </div>
         </div>
       </div>
-
       <div className="px-5 md:px-8 py-10">
         <h1 className="text-3xl font-head md:5xl mb-1">What We Can Remove</h1>
         <p className="text-md md:text-xl leading-5 mb-5 text-neutral-200">
@@ -208,17 +220,7 @@ function Hero() {
             <p className="text-lg font-body font-bold">Hard Inquiries</p>
           </div>
         </div>
-
-        <div className="flex justify-center sm:justify-start mt-8">
-          <a
-            href="#consultation"
-            className="bg-[#F1DABF] active:scale-95 cursor-pointer px-8 py-4 rounded-full text-md uppercase font-bold font-body text-black hover:-translate-y-1 duration-300 transition-all inline-block"
-          >
-            Book my free consultation
-          </a>
-        </div>
       </div>
-
       <div className="bg-linear-to-r from-[black] to-[#2b1d13] px-5 md:px-8 py-10">
         <h1 className="text-3xl font-head md:text-5xl mb-7">
           Your 4-Step Process
@@ -238,13 +240,13 @@ function Hero() {
             </a>
           </div>
 
-          <div className="border border-b-[#362417] font-body border-t-[#362417] hover:shadow-md shadow-[#362417] rounded-lg px-5 md:px-9 py-8 md:py-10">
+          <div className="border  border-red-500 bg-red-500/10 font-body border-t-[#362417] hover:shadow-md shadow-[#362417] rounded-lg px-5 md:px-9 py-8 md:py-10">
             <h1 className="text-5xl mb-3 opacity-30 font-body ">02</h1>
             <h2 className="text-xl md:text-2xl mb-2 uppercase font-bold font-body">
               Activate MyFreeScoreNow
             </h2>
             <h3 className="mb-4 text-[#F1DABF]">
-              ($39/MONTH REQUIRED) — MANDATORY TO START YOUR SERVICE
+              ACTIVATE YOUR 7 days trial MY FREE SCORE NOW
             </h3>
             <p className="">. Must be activated immediately after purchase.</p>
             <p>. We cannot access or work your credit without it.</p>
@@ -256,7 +258,7 @@ function Hero() {
                 href="https://buy.stripe.com/dRm5kF2KsecA1pC6HRcfK09"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#362417] active:scale-95 cursor-pointer px-5 mt-3 py-3 rounded-full text-md uppercase font-bold font-body text-[#F1DABF] hover:underline inline-block"
+                className="bg-[#ffffff] text-red-500 active:scale-95 cursor-pointer px-5 mt-3 py-3 rounded-full text-md uppercase font-bold font-body text-[#F1DABF] hover:underline inline-block"
               >
                 Pay $39 myfreescorenow fee
               </a>
@@ -282,7 +284,7 @@ function Hero() {
             </div>
           </div>
 
-          <div className="border border-red-500 bg-red-500/10 font-body border-t-[#362417] hover:shadow-md shadow-[#362417] rounded-lg px-5 md:px-9 py-8 md:py-10">
+          <div className="border font-body border-t-[#362417] hover:shadow-md shadow-[#362417] rounded-lg px-5 md:px-9 py-8 md:py-10">
             <h1 className="text-5xl mb-3 opacity-30 font-body ">04</h1>
             <h2 className="text-xl md:text-2xl mb-2 uppercase font-bold font-body">
               Action Plan + We Begin Your Disputes
@@ -311,6 +313,16 @@ function Hero() {
               Your account will not be started.
             </p>
           </div>
+        </div>
+
+        <div className="flex justify-center sm:justify-start mt-8">
+          <a
+            href="https://calendly.com/d/ds6k-p82-wcp"
+            target="_blank"
+            className="bg-[#F1DABF] active:scale-95 cursor-pointer px-8 py-4 rounded-full text-md uppercase font-bold font-body text-black hover:-translate-y-1 duration-300 transition-all inline-block"
+          >
+            Book my free consultation
+          </a>
         </div>
       </div>
       <div className="bg-[#000000] px-5 md:px-8 py-10">
@@ -354,11 +366,87 @@ function Hero() {
           </div>
         </div>
       </div>
+      <div className="bg-linear-to-r from-[black] to-[#2b1d13] px-5 md:px-8 py-10">
+        <div className="bg-[#000000] px-5 md:px-8 py-10">
+          <h1 className="text-3xl font-head md:text-5xl mb-7">FAQ</h1>
 
+          <div className="flex flex-col gap-3 max-w-2xl">
+            {/* FAQ 1 */}
+            <div className="border border-[#362417] rounded-xl overflow-hidden">
+              <button
+                onClick={() => setOpenFaq(openFaq === 0 ? null : 0)}
+                className="w-full flex items-center justify-between px-5 py-4 bg-[#173420]/40 hover:bg-[#173420]/60 transition-colors"
+              >
+                <span className="font-bold font-body text-left text-[#F1DABF]">
+                  Have any questions regarding our services?
+                </span>
+                <ChevronDown
+                  size={20}
+                  className={`text-[#F1DABF] shrink-0 ml-3 transition-transform duration-300 ${
+                    openFaq === 0 ? "rotate-180" : "rotate-0"
+                  }`}
+                />
+              </button>
+              {openFaq === 0 && (
+                <div className="px-5 py-4 text-sm text-neutral-300 font-body border-t border-[#362417]">
+                  Contact us today — one sec, I'll give you the number.
+                </div>
+              )}
+            </div>
+
+            {/* FAQ 2 */}
+            <div className="border border-[#362417] rounded-xl overflow-hidden">
+              <button
+                onClick={() => setOpenFaq(openFaq === 1 ? null : 1)}
+                className="w-full flex items-center justify-between px-5 py-4 bg-[#173420]/40 hover:bg-[#173420]/60 transition-colors"
+              >
+                <span className="font-bold font-body text-left text-[#F1DABF]">
+                  Do you offer a guarantee?
+                </span>
+                <ChevronDown
+                  size={20}
+                  className={`text-[#F1DABF] shrink-0 ml-3 transition-transform duration-300 ${
+                    openFaq === 1 ? "rotate-180" : "rotate-0"
+                  }`}
+                />
+              </button>
+              {openFaq === 1 && (
+                <div className="px-5 py-4 text-sm text-neutral-300 font-body border-t border-[#362417]">
+                  If we do not remove anything from your credit profile within
+                  60 days, we will refund you for 2 months.
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h1 className="text-3xl font-head md:text-4xl mb-5">
+            Communication Policy
+          </h1>
+          <p>
+            This program is designed for efficiency and confidentiality. All
+            communication is handled through your client portal and email. Phone
+            consultations are not included and must be booked separately if
+            needed.
+          </p>
+        </div>
+
+        <div className="mt-6">
+          <h1 className="text-3xl font-head md:text-4xl mb-5">Policy Notice</h1>
+          <p>All sales are final. No refunds will be issued.</p>
+        </div>
+      </div>
       <div className="px-5 md:px-8 py-10">
         <div className="border px-5 flex flex-col gap-4 items-center py-6 rounded-xl">
           <h1 className="text-3xl font-head md:text-5xl mb-3">
-            Ready To Start?
+            <a
+              href="https://buy.stripe.com/7sYeVfdp67Occ4g4zJcfK0b"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ready To Start?
+            </a>
           </h1>
           <p className="text-center font-body md:text-lg">
             Get 3 months of credit disputes for $169 and start positioning your
@@ -374,9 +462,25 @@ function Hero() {
           </a>
         </div>
       </div>
-
-      <div className="mt-6">
+      <div className="mt-6 px-5 md:px-8">
         <hr className="w-full mb-5 text-[#362417] h-0.5" />
+        <div className="flex flex-col items-center gap-1 mb-4 text-sm font-body text-neutral-400">
+          <p className="uppercase tracking-wide text-xs text-neutral-500">
+            Customer Support
+          </p>
+          <a
+            href="tel:+18633433307"
+            className="hover:text-[#F1DABF] transition-colors"
+          >
+            +1 (863) 343-3307
+          </a>
+          <a
+            href="mailto:info@emmpiresolutions.com"
+            className="hover:text-[#F1DABF] transition-colors"
+          >
+            info@emmpiresolutions.com
+          </a>
+        </div>
         <p className="text-sm mb-3 text-center text-neutral-600 font-body ">
           © 2026 Emmpire Solutions. All rights reserved.
         </p>
